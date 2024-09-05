@@ -48,23 +48,27 @@
     transition: all 1s ease-in-out;
 }
 
-#logout{
+#github{
     border-top: 1px solid #e3e9f7 ;
     padding: 12px;
 }
 
-#logout-btn{
+#github-redirect{
+    background-color: #e2e2e2;
     border: none;
     padding: 12px;
     font-size: 14px;
     display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
     align-items: center;
     border-radius: 8px;
     text-align: start;
     transition: all 1s ease-in-out;
 }
-#logout-btn:hover{
-    background-color:rgba(84, 119, 168, 0.8) ;
+#github-redirect:hover{
+    background-color:rgba(0, 0, 0, 0.3) ;
     cursor: pointer;
 }
 

@@ -4,11 +4,13 @@ const side_item = document.querySelectorAll(".side-item");
 const orderName =  document.getElementById('order-name');
 const orderData =  document.getElementById('order-data');
 const orderEmail =  document.getElementById('order-email');
+let compareCtx = document.getElementById('compare-chart').getContext('2d');
+let ctx = document.getElementById('sessions-chart').getContext('2d');
 
 
 // Inicializa as funções
 window.onload = () =>{
-    createChart();
+    
     completeTable();
     updatePerformanceIndicators();
     alterarActive();

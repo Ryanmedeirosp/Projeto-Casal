@@ -24,11 +24,22 @@ function addUser(){
             registered: formattedDate
         };
         data.users.push(addNewUser);
-      
+
+        // fazendo atualização dos gráficos
+
+        graficoBarra.data.datasets[0].data =[totalSessions,data.users.length];
+        graficoBarra.update()
+        
+        //atualizando as métricas
         document.getElementById('register-users').textContent = data.users.length
         
+        //limpando os inputs
         document.getElementById('add-user-name').value = '';
         document.getElementById('add-user-email').value = '';
+       
+      
+
+        
 
     }
 
@@ -40,6 +51,8 @@ document.getElementById('add-user-button').addEventListener('click',()=>{
     tableBody.innerHTML = '';
     addUser();
     completeTable();
+   
+    
 
 })
 
