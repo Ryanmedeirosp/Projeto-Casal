@@ -1,0 +1,204 @@
+/* main */
+:root {
+    --border--config: 1px solid #e3e9f7;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: aliceblue;
+    display: flex;
+    width: 100%;
+}
+
+#main-content {
+    transition: all 1s ease-in-out;
+    padding: 20px;
+    flex: 1;
+}
+#content-chart{
+    width: 100%;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.charts {
+   width: 800px;
+   height: 300px;
+   transition: all 1s ease-in-out;
+}
+
+#sessions-chart:hover,#compare-chart:hover{
+    cursor: pointer;
+}
+
+#chart-div{
+    justify-content: center;
+    gap: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.charts, #div-user-table, #performance,#div-user-table h1 {
+    margin-bottom: 60px;
+}
+
+.charts,#div-user-table {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#order-by{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    gap: 20%;
+}
+
+#order-by div{ 
+    transition: all 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#order-by div img.reverse{
+    transform: rotate(180deg);
+}
+
+#order-by div:hover{
+    cursor: pointer;
+}
+  
+
+#div-user-table input {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #747474;
+    transition: all 1s ease-in-out;
+}
+
+#users-table tbody tr {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+#users-table tbody tr.hidden {
+    opacity: 0;
+}
+#container-add-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0;
+    transition: all 1s ease-in-out;
+}
+
+#container-add-user h4{
+    margin-bottom: 1%;
+    transition: all 1s ease-in-out;
+}
+
+#container-add-user p{
+   word-wrap: unset;
+    display: flex;
+    position: relative;
+    right: 10px;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+
+#add-user{
+  
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    gap:5%;
+    justify-content: center;
+   
+}
+
+#add-user input{
+   
+    max-width: 30%;
+}
+
+#add-user button{
+    transition: all 1s ease-in-out;
+    max-width: 30%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(231, 231, 231);
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #747474;
+}
+
+#add-user button:hover{
+    background-color:rgba(84, 119, 168, 0.6);
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+   
+}
+
+table th, table td {
+    border: var(--border--config);
+    padding: 8px;
+    text-align: left;
+}
+#performance {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+#performance h1{
+
+    margin-bottom: 30px;
+}
+
+
+.performance-metric {
+    text-align: start;
+    border: var(--border--config);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.performance-metric h3 {
+    margin-bottom: 5px;
+}
+
+.performance-metric p {
+    font-size: 18px;
+    font-weight: bold;
+}
+h1{
+    transition: all 1s ease-in-out;
+   
+}
+
+.performance-metric p{
+    transition: all 1s ease-in-out;
+   
+}
+.performance-metric h3{
+    transition: all 1s ease-in-out;
+    
+}
+

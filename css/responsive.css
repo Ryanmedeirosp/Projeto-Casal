@@ -1,0 +1,177 @@
+
+@media (max-width: 1000px){
+    /*MAIN*/
+    #main-content {
+        width: 70%;
+    }
+    .charts {
+        width: 600px;
+        transition: all 1s ease-in-out;
+     
+     }
+
+    
+     #add-user{
+        width: 100%;
+        transition: all 1s ease-in-out;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+     }
+     #container-add-user{
+        margin: 10px 0;
+        flex-direction: column;
+        transition: all 1s ease-in-out;
+     }
+     #container-add-user h4{
+        margin-bottom: 5%;
+     }
+     #add-user input {
+        max-width: 100%;
+     }
+
+     #add-user button{
+        max-width: 50%;
+        transition: all 1s ease-in-out;
+     }
+       
+}
+@media (max-width: 800px){
+    /*MAIN*/
+    table th, table td{
+        transition: all 1s ease-in-out;
+        font-size: smaller;
+        padding: 0;
+    }
+   
+    .charts {
+        transition: all 1s ease-in-out;
+        width: 400px;
+     }    
+
+    
+}
+@media (max-width: 600px){
+    /*HEADER*/
+    #logo-nadzieja{
+        width: 200px;
+        transition: all 1s ease-in-out;
+    }
+
+    #menu-img-button img{
+        transition: all 1s ease-in-out;
+        width: 30px;
+    }
+
+    #menu-img-button{
+        transition: all 1s ease-in-out;
+        margin: 0;
+    }
+    
+    /*SIDEBAR*/
+    .side-item a img{
+        width: 18px;
+        transition: all 1s ease-in-out;
+    }
+    .side-item,#logout-btn{
+        padding: 3px;
+        transition: all 1s ease-in-out;
+    }
+    #sidebar.open-sidebar .item-description{
+        font-size: 10px;
+        width: 70px;
+        transition: all 1s ease-in-out;
+    }
+
+    /*MAIN*/
+    .performance-metric p{
+        transition: all 1s ease-in-out;
+        font-size: 10px;
+    }
+    .performance-metric h3{
+        transition: all 1s ease-in-out;
+        font-size: 13px;
+    }
+
+    h1{
+        transition: all 1s ease-in-out;
+        font-size: 20px;
+    }
+    
+    #order-by{
+        transition: all 0.5s ease-in-out;
+        font-size: 9px;
+        gap: 5%;
+    }
+    .charts {
+        transition: all 1s ease-in-out;
+        width: 280px;
+     
+     }
+     table th, table td{
+        transition: all 1s ease-in-out;
+        font-size: 10px;
+        
+    }
+    #user-filter{
+        max-width: 70%;
+        transition: all 1s ease-in-out;
+    }
+    #container-add-user p{
+        font-size: 12px;
+        transition: all 1s ease-in-out;
+    }
+  
+     #container-add-user h4{
+        font-size: 12px;
+        transition: all 1s ease-in-out;
+     }
+   
+
+     #div-user-table input{
+        max-width: 70%;
+        
+     }
+     #add-user button{
+        font-size: 10px;
+     }
+     #add-user button{
+        max-width: 35%;
+        transition: all 1s ease-in-out;
+     }
+}
+
+
+@media (max-width: 400px){
+    /*HEADER*/
+     #menu-img-button img{
+        transition: all 1s ease-in-out;
+        width: 30px;
+
+    }
+    /*SIDEBAR*/
+    #sidebar.open-sidebar .item-description{
+        font-size: 8px;
+        width: 60px;
+        transition: all 1s ease-in-out;
+    }
+
+    /*MAIN*/
+    h1{
+        transition: all 1s ease-in-out;
+        font-size: 17px;
+    }
+    table th, table td{
+        transition: all 1s ease-in-out;
+        font-size: 9px;
+        
+    }
+    .charts {
+        transition: all 1s ease-in-out;
+        width: 250px;
+     
+     }
+
+}
+
+

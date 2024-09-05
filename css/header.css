@@ -1,0 +1,77 @@
+/* Geral */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* header.css */
+
+:root {
+    --main-bg-color:rgba(84, 119, 168,0.6);
+}
+  
+
+header{
+    border-bottom: 2px solid #e3e9f7;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color:var(--main-bg-color);
+    align-items: center;
+   
+}
+
+#logo{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-nadzieja{
+    width: 200px;
+    transition: all 1s ease-in-out;
+}
+
+#menu-img-button{
+    background-color:rgba(84, 119, 168,0.01);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 15px 0 35px;
+    transition: all 1s ease-in-out;
+
+}
+
+#menu-img-button:hover img { 
+    cursor: pointer;
+    background-color:var(--main-bg-color);
+}
+
+#menu-img-button img{
+    border-radius: 10px;
+    width: 40px;
+    padding: 5px;
+}
+
+
+#menu-img-button img.reverse{
+    transform: rotate(180deg);
+}
+
+

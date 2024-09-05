@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/addUser.js" defer></script>
+    <script src="scripts/openSideBar.js" defer></script>
+    <script src="scripts/dataChart.js" defer></script>
+    <script src="scripts/createChart.js" defer></script>
+    <script src="scripts/filters.js" defer></script>
+    <script src="scripts/fillTable&Indicator.js" defer></script>
+    <title>Nadzieja Insight</title>
+</head>
+<body>
+
+    <header>  
+        <!-- Seção do logo e botão de menu -->
+        <div id="logo"> 
+
+             <!-- Botão para abrir e fechar a barra lateral -->
+            <button id="menu-img-button">
+                <img id="img-menu-sidebar" src="images/arrow.svg" alt="">
+            </button>
+
+            <!-- Logo da aplicação -->
+            <img id="logo-nadzieja" src="./images/logo.svg" alt="Nadzieja-Insight-LOGO"> 
+
+        </div> 
+
+    </header>
+
+    <main>
+
+        <!-- Barra lateral de navegação -->
+        <nav id="sidebar">
+            <div id="sidebar-content">
+
+                <!-- Items da barra lateral -->
+                <ul id="side-items">
+                    <li href="#logo" class="side-item active" onclick="alterarActive()">
+                        <a >
+                            <img src="./images/overview.svg" alt="">
+                            <span class="item-description">Geral</span>
+                        </a>
+                    </li>
+
+                    <li  href="#contet-chart"  class="side-item" onclick="alterarActive()">
+                        <a>
+                            <img src="./images/session.svg" alt="">
+                            <span class="item-description">Sessões</span>
+                        </a>
+                    </li>
+
+                    <li href="#div-user-table" class="side-item" onclick="alterarActive()">
+                        <a >
+                            <img src="./images/users.svg" alt="">
+                            <span class="item-description">Usuários</span>
+                        </a>
+                    </li>
+                   
+                    <li href="#performance" class="side-item" onclick="alterarActive()">
+                        <a>
+                            <img src="./images/perfomance.svg" alt="">
+                            <span class="item-description">Desempenho</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Seção para o botão de logout -->
+            <div id="logout">
+                <button id="logout-btn">
+                    <img width="20px" src="images/exit.svg" alt="">
+                    <span class="item-description">Saída</span>
+                </button>
+            </div>
+        </nav>
+        
+        <div id="main-content">
+
+            <!-- Gráficos e Indicadores -->
+             <div id="content-chart">
+                <h1>Gráficos e Indicadores</h1>
+                <div id="chart-div">
+                    <div class="charts">
+                    
+                        <canvas id="sessions-chart"></canvas>
+                       
+                    </div>
+                 
+                    <div class="charts">
+                        
+                        <canvas id="compare-chart"></canvas>
+                       
+                    </div>
+                </div>
+                
+             </div>
+            
+
+            <!-- Tabela de Usuários -->
+            <div id="div-user-table">
+                <h1>Tabela de Usuários</h1>
+
+                <!-- Ordenação -->
+                <div id="order-by">
+                    <div id="div-order-name">
+                        <img width="20px" id="order-name" src="./images/uparrow.svg" alt="">
+                        <p for="name">Ordenar por nome</p>
+                    </div>
+
+                    <div id="div-order-email">
+                        <img width="20px" id="order-email" src="./images/uparrow.svg" alt="">
+                        <p for="email">Ordenar por email</p>
+                    </div>
+                    
+                    <div id="div-order-data">
+                        <img width="20px" id="order-data" src="./images/uparrow.svg" alt="">
+                        <p for="data">Ordenar por data</p>
+                    </div>
+                </div>
+
+                <!-- Filtro -->
+                <input type="text" id="user-filter" placeholder="Filtrar por nome, data ou email...">
+                
+                <div id="container-add-user">
+                    <h4>Adicionar Usúarios</h4>
+                    <div id="add-user">
+                        
+                        <input id="add-user-name" type="text" placeholder="Nome">
+
+                        
+                        <input id="add-user-email" type="email" placeholder="Email">
+
+                        <button id="add-user-button">Adicionar Usuário</button>
+
+                        
+                    </div>
+                    <p id="alert-error-user"></p>
+                
+
+                </div>
+                <table id="users-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Data de Registro</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-data">
+                        
+                        <!-- Dados de usuários serão inseridos aqui -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Indicadores de Desempenho -->
+            <div id="performance">
+                <h1>Desempenho</h1>
+                <div class="performance-metric">
+                    <h3>Tempo Médio de Resposta</h3>
+                    <p id="average-response-time">0 ms</p>
+                </div>
+                <div class="performance-metric">
+                    <h3>Taxa de Erro</h3>
+                    <p id="error-rate">0%</p>
+                </div>
+                <div class="performance-metric">
+                    <h3>Usuários Ativos</h3>
+                    <p id="active-users">0</p>
+                </div>
+                <div class="performance-metric">
+                    <h3>Usuários Registrados</h3>
+                    <p id="register-users">0</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
