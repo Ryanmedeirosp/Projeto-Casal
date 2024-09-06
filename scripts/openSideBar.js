@@ -35,18 +35,19 @@ side_item[0].addEventListener('click', () => {
     window.location.href = '#logo'; 
     
 });
-
 side_item[1].addEventListener('click', () => {
+    sideContains()
+    window.location.href = '#container-metrics';
+});
+
+
+side_item[2].addEventListener('click', () => {
     sideContains()
     window.location.href = '#content-chart';
 });
 
-side_item[2].addEventListener('click', () => {
+side_item[3].addEventListener('click', () => {
     sideContains()
     window.location.href = '#div-user-table';
 });
 
-side_item[3].addEventListener('click', () => {
-    sideContains()
-    window.location.href = '#performance';
-});
