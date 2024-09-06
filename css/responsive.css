@@ -121,7 +121,14 @@
         font-size: 12px;
         transition: all 1s ease-in-out;
     }
-  
+    
+    .img-order{
+       
+        padding: 0;
+        width: 20px;
+        background-color: #e2e2e2;
+        margin-right: 3px;
+    }
      #container-add-user h4{
         font-size: 12px;
         transition: all 1s ease-in-out;

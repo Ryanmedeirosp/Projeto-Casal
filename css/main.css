@@ -29,9 +29,11 @@ main{
 }
 .charts {
    width: 800px;
-   height: 300px;
+   height: 400px;
    transition: all 1s ease-in-out;
+   
 }
+
 
 #sessions-chart:hover,#compare-chart:hover{
     cursor: pointer;
@@ -39,15 +41,19 @@ main{
 
 #chart-div{
     justify-content: center;
-    gap: 20%;
+    
     display: flex;
     flex-direction: column;
 }
-.charts, #div-user-table, #performance,#div-user-table h1 {
+#div-user-table, #performance,#div-user-table h1 {
     margin-bottom: 60px;
 }
 
-.charts,#div-user-table {
+.charts {
+    margin-bottom: 10%;
+    text-align: center;
+}
+#div-user-table{
     margin-bottom: 40px;
     text-align: center;
 }
@@ -74,12 +80,24 @@ main{
     cursor: pointer;
 }
   
+.img-order{
+    border-right: 1px solid #919191 ;
+    border-radius: 5px;
+    padding: 5px;
+    width: 30px;
+    background-color: #e2e2e2;
+    margin-right: 3px;
+}
+.img-order:hover{
+    background-color:rgba(0, 0, 0, 0.3) ;
+    cursor: pointer;
+}
 
 #div-user-table input {
     border-radius: 10px;
     margin-bottom: 10px;
     padding: 8px;
-    width: 100%;
+    width: 500%;
     max-width: 100%;
     border: 1px solid #747474;
     transition: all 1s ease-in-out;
@@ -137,6 +155,7 @@ main{
     border-radius: 10px;
     margin-bottom: 10px;
     background-color: #e2e2e2;;
+    color: black;
     padding: 8px;
     width: 100%;
     border: 1px solid #747474;

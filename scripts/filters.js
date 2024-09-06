@@ -17,7 +17,7 @@ function filterUsers() {
             
             setTimeout(() => {
                 row.style.display = 'none';
-            }, 700);  
+            }, 300);  
         }
     });
 }

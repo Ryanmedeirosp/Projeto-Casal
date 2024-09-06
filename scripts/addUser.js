@@ -17,7 +17,8 @@ function addUser(){
     } else if (!validateEmail(addEmail)) {
         erroUser.textContent = 'O email inserido não é válido. Por favor, insira um email no formato correto.';
     } else {
-        erroUser.textContent = '';
+        erroUser.textContent = 'O usuário foi adicionado';
+
         const addNewUser = {
             name: addName,
             email: addEmail,
@@ -36,6 +37,10 @@ function addUser(){
         //limpando os inputs
         document.getElementById('add-user-name').value = '';
         document.getElementById('add-user-email').value = '';
+        
+        setTimeout(() => {
+            erroUser.textContent= '';
+        }, 500); 
        
       
 

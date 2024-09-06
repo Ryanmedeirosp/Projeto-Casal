@@ -4,12 +4,13 @@ const graficoLinha = new Chart(ctx, {
     type: 'line',
     data: {
         labels: data.sessions.map(session => session.date),
+        
         datasets: [{
             label: 'Número de Sessões',
             data: data.sessions.map(session => session.count),
-            borderColor: '#5477A8',
-            backgroundColor: 'rgba(84, 119, 168, 0.4)',
-            borderWidth: 2,
+            borderColor: '#002c66',
+            backgroundColor: 'rgba(8, 36, 73, 0.6)',
+            borderWidth: 3,
             fill: true
         }]
     },
@@ -18,19 +19,36 @@ const graficoLinha = new Chart(ctx, {
         maintainAspectRatio: false,
         scales: {
             x: {
-                beginAtZero: true
+                beginAtZero: true,
+                ticks:{
+                    color: 'black',
+                    font:{
+                        size: 14
+                    }
+                }
             },
             y: {
-                beginAtZero: true
+                beginAtZero: true,
+                ticks:{
+                    color: 'black',
+                    font:{
+                        size: 14
+                    }
+                }
             }
         },
         plugins: {
+
             tooltip: {
                 callbacks: {
                     label: function(context) {
                         return `Sessões: ${context.raw}`;
                     }
                 }
+            },
+
+            legend: {
+                display: false 
             }
         }
     }
@@ -51,22 +69,40 @@ const graficoBarra = new Chart(compareCtx, {
     data: {
         labels: ['Total de Sessões', 'Total de Usuários'],
         datasets: [{
-            label: 'Comparação',
+            label: 'Resumo',
             data: [totalSessions, data.users.length],
-            backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)'],
+            backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
             borderColor: ['rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
-            borderWidth: 1
+            borderWidth: 3
         }]
     },
     options: {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
+            x:{
+                ticks:{
+                    color: 'black',
+                    font:{
+                        size: 14
+                    }
+                }
+
+            },
             y: {
                 beginAtZero: true,
                 title: {
                     display: true,
-                    text: 'Quantidade'
+                    text: 'Quantidade',
+                    font:{
+                        size: 14
+                    }
+                },
+                ticks:{
+                    color: 'rgb(0,0,0)',
+                    font:{
+                        size: 14
+                    }
                 }
             }
         },
@@ -77,6 +113,9 @@ const graficoBarra = new Chart(compareCtx, {
                         return `${context.label}: ${context.raw}`;
                     }
                 }
+            },
+            legend: {
+                display: false 
             }
         }
     }
