@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <script src="scripts/script.js" defer></script>
     <script src="scripts/addUser.js" defer></script>
     <script src="scripts/openSideBar.js" defer></script>
@@ -15,6 +18,9 @@
     <script src="scripts/createChart.js" defer></script>
     <script src="scripts/filters.js" defer></script>
     <script src="scripts/fillTable&Indicator.js" defer></script>
+    <script src="scripts/reveal.js" defer></script>
+
+
     <title>Nadzieja Insight</title>
 </head>
 <body>
@@ -83,18 +89,63 @@
         </nav>
         
         <div id="main-content">
+             <!-- Indicadores de Desempenho -->
+             <div id="container-metrics" >
+                <h1>Desempenho</h1>
+                <div class="visibility-metrics">
+                    <div id="performance">
+                    
+                        <div class="performance-metric">
+                            <h3>Tempo Médio de Resposta</h3>
+                            <p id="average-response-time">0 ms</p>
+                        </div>
+                      
+                        <div class="performance-metric">
+                            <h3>Usuários Ativos</h3>
+                            <p id="active-users">0</p>
+                        </div>
+                        <div class="performance-metric">
+                            <h3>Usuários Registrados</h3>
+                            <p id="register-users">0</p>
+                        </div>
+                    </div>
+                    <div class="container-circle">
+                        <div class="circle-metrics">
+                            <h2>Taxa de Erro</h2>
+                               
+                                <svg width="192" height="192" viewBox="-24 -24 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+                                    <circle r="86" cx="96" cy="96" fill="transparent" stroke="#e0e0e0" stroke-width="20" stroke-dasharray="540.08px" stroke-dashoffset="0"></circle>
+                                    <circle r="86" cx="96" cy="96" stroke="#000f4d" stroke-width="25" stroke-linecap="round" stroke-dashoffset="513px" fill="transparent" stroke-dasharray="540.08px"></circle>
+                                    <text x="74px" y="107px" fill="#000000" font-size="34px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -188px)">5%</text>
+                                </svg>
+                        </div>
+                        <div class="circle-metrics">
+                            <h2>Performace</h2>
+                               
+                               
+                                <svg width="192" height="192" viewBox="-24 -24 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+                                    <circle r="86" cx="96" cy="96" fill="transparent" stroke="#e0e0e0" stroke-width="20" stroke-dasharray="540.08px" stroke-dashoffset="0"></circle>
+                                    <circle r="86" cx="96" cy="96" stroke="#4CAF50" stroke-width="25" stroke-linecap="round" stroke-dashoffset="113px" fill="transparent" stroke-dasharray="540.08px"></circle>
+                                    <text x="65px" y="107px" fill="#000000" font-size="34px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -188px)">79%</text>
+                                </svg>
+    
+                        </div>
+                    </div>
+                    
+                </div>
+             </div>
 
             <!-- Gráficos e Indicadores -->
              <div id="content-chart">
                 <h1>Gráficos e Indicadores</h1>
                 <div id="chart-div">
-                    <div class="charts">
+                    <div class="charts visibility-chart-session">
                         <h2>Sessão </h2>
                         <canvas id="sessions-chart"></canvas>
                        
                     </div>
                  
-                    <div class="charts">
+                    <div class="charts visibility-chart-compare">
                         <h2>Resumo </h2>
                         <canvas id="compare-chart"></canvas>
                        
@@ -105,11 +156,11 @@
             
 
             <!-- Tabela de Usuários -->
-            <div id="div-user-table">
+            <div id="div-user-table" class="visibility-user-table">
                 <h1>Tabela de Usuários</h1>
 
                 <!-- Ordenação -->
-                <div id="order-by">
+                <div id="order-by" >
                     <div id="div-order-name">
                         <img  class="img-order" id="order-name" src="./images/uparrow.svg" alt="">
                         <p for="name">Ordenar por nome</p>
@@ -127,7 +178,7 @@
                 </div>
 
                 <!-- Filtro -->
-                <input type="text" id="user-filter" placeholder="Filtrar por nome, data ou email...">
+                <input  type="text" id="user-filter" placeholder="Filtrar por nome, data ou email...">
                 
                 <div id="container-add-user">
                     <h4>Adicionar Usúarios</h4>
@@ -161,37 +212,7 @@
                 </table>
             </div>
 
-            <!-- Indicadores de Desempenho -->
-             <div id="container-metrics">
-                <h1>Desempenho</h1>
-                <div>
-                    <div id="performance">
-                    
-                        <div class="performance-metric">
-                            <h3>Tempo Médio de Resposta</h3>
-                            <p id="average-response-time">0 ms</p>
-                        </div>
-                      
-                        <div class="performance-metric">
-                            <h3>Usuários Ativos</h3>
-                            <p id="active-users">0</p>
-                        </div>
-                        <div class="performance-metric">
-                            <h3>Usuários Registrados</h3>
-                            <p id="register-users">0</p>
-                        </div>
-                    </div>
-                    <div id="error-rate">
-                        <h2>Taxa de Erro</h2>
-                           
-                            <svg width="192" height="192" viewBox="-24 -24 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
-                                <circle r="86" cx="96" cy="96" fill="transparent" stroke="#e0e0e0" stroke-width="20" stroke-dasharray="540.08px" stroke-dashoffset="0"></circle>
-                                <circle r="86" cx="96" cy="96" stroke="#000f4d" stroke-width="25" stroke-linecap="round" stroke-dashoffset="513px" fill="transparent" stroke-dasharray="540.08px"></circle>
-                                <text x="74px" y="107px" fill="#000000" font-size="34px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -188px)">5%</text>
-                            </svg>
-                    </div>
-                </div>
-             </div>
+           
         </div>
     </main>
 

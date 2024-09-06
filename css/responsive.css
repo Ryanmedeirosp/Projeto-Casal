@@ -1,5 +1,8 @@
 
-@media (max-width: 1000px){
+
+
+
+@media (max-width: 1200px){
     /*MAIN*/
     #main-content {
         width: 70%;
@@ -36,7 +39,7 @@
      }
        
 }
-@media (max-width: 800px){
+@media (max-width: 900px){
     /*MAIN*/
     table th, table td{
         transition: all 1s ease-in-out;
@@ -49,8 +52,20 @@
         width: 400px;
         margin-bottom: 100px;
      }    
-
+     svg{
+        width: 150px;
+        
+     }
     
+}
+
+@media (max-width: 800px){
+    #container-metrics div{
+        flex-direction: column;
+        transform: scaleY(-100%);
+       
+        
+    }
 }
 @media (max-width: 600px){
     /*HEADER*/
@@ -106,7 +121,7 @@
     #order-by{
         transition: all 0.5s ease-in-out;
         font-size: 9px;
-        gap: 5%;
+        gap: 2%;
     }
     .charts {
         transition: all 1s ease-in-out;
@@ -147,8 +162,6 @@
      }
      #add-user button{
         font-size: 10px;
-     }
-     #add-user button{
         max-width: 35%;
         transition: all 1s ease-in-out;
      }
@@ -180,7 +193,7 @@
     }
     table th, table td{
         transition: all 1s ease-in-out;
-        font-size: 9px;
+        font-size: 8px;
         
     }
     .charts {
@@ -188,9 +201,7 @@
         width: 250px;
      
      }
-     svg{
-        width: 70px;
-     }
+  
 
 }
 

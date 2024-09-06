@@ -170,6 +170,7 @@ table {
    
     width: 100%;
     border-collapse: collapse;
+    height: 100%;
    
 }
 
@@ -237,12 +238,19 @@ h1{
 #container-metrics div{
     width: 100%;
     display: flex;
+    transition: transform 1s ease;
 }
 
-#error-rate{
+
+.circle-metrics{
     width: 50%;
    
     align-items: center;
     flex-direction: column;
     display: flex;
+}
+
+.visibility-metrics, .visibility-chart-session, 
+.visibility-chart-compare,.visibility-user-table{
+    visibility: hidden;
 }
